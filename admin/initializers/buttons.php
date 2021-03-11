@@ -8,7 +8,7 @@ function register_buttons()
         'lyket_post_buttons',
         'Post buttons',
         'render_post_buttons_section',
-        'lyket-post-buttons'
+        'lyket_post_buttons'
     );
 
     //* add_settings_field: renders a new field
@@ -32,7 +32,7 @@ function register_buttons()
         'lyket_page_buttons',
         'Page buttons',
         'render_page_buttons_section',
-        'lyket-page-buttons'
+        'lyket_page_buttons'
     );
 
     register_page_buttons_field('Button type', 'lyket_page_button_type', 'render_button_type_input');
@@ -74,7 +74,7 @@ function register_post_buttons_field($name, $key, $render_function, $rowClass = 
       $key,
       $name,
       $render_function,
-      'lyket-post-buttons',
+      'lyket_post_buttons',
       'lyket_post_buttons',
       array("class" => $rowClass, 'context' => "post"),
   );
@@ -87,7 +87,7 @@ function register_page_buttons_field($name, $key, $render_function, $rowClass = 
       $key,
       $name,
       $render_function,
-      'lyket-page-buttons',
+      'lyket_page_buttons',
       'lyket_page_buttons',
       array("class" => $rowClass, 'context' => "page"),
   );

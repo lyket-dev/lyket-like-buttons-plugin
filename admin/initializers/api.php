@@ -7,7 +7,7 @@ function register_lyket_user_settings()
         'lyket_user_settings',
         'User Settings',
         'render_user_settings_section',
-        'lyket-user-settings'
+        'lyket_user_settings'
     );
 
     register_user_settings_field('API key', 'lyket_api_key', 'render_lyket_api_key_input');
@@ -37,7 +37,7 @@ function register_user_settings_field($name, $key, $render_function) {
       $key,
       $name,
       $render_function,
-      'lyket-user-settings',
+      'lyket_user_settings',
       'lyket_user_settings',
   );
 

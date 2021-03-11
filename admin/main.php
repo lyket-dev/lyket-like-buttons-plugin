@@ -17,8 +17,6 @@ $templates = array(
 );
 
 include dirname(__FILE__) . '/form/tabs.php';
-include dirname(__FILE__) . '/form/user_settings.php';
-include dirname(__FILE__) . '/form/buttons.php';
 include dirname(__FILE__) . '/initializers/buttons.php';
 include dirname(__FILE__) . '/initializers/api.php';
 
@@ -57,10 +55,7 @@ function render_lyket_admin()
 {
     ?>
 	    <div class="wrap">
-        <div id="icon-options-general" class="icon32"></div>
-
         <?php do_action('render_lyket_tabs'); ?>
-				<?php do_action('render_lyket_form'); ?>
       </div>
 		<?php
 }
