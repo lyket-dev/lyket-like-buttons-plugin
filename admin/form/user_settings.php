@@ -1,4 +1,7 @@
 <?php
+include dirname(__FILE__) . '/inputs/index.php';
+
+add_action('render_lyket_form', 'render_form');
 
 function render_form()
 {
