@@ -8,8 +8,7 @@ function render_form()
         <form method="post" action="options.php">
           <?php
             //[[add_settings_section callback is displayed here. For every new section we need to call settings_fields.
-            settings_fields("header_section");
-    settings_fields("advertising_section");
+            settings_fields("lyket_user_settings");
 
     // all the add_settings_field callbacks is displayed here
     do_settings_sections("lyket-user-settings");

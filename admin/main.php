@@ -16,7 +16,7 @@ $templates = array(
     "updown" => array("simple", "reddit")
 );
 
-// include dirname(__FILE__) . '/form/tabs.php';
+include dirname(__FILE__) . '/form/tabs.php';
 include dirname(__FILE__) . '/form/user_settings.php';
 include dirname(__FILE__) . '/form/buttons.php';
 include dirname(__FILE__) . '/initializers/buttons.php';
@@ -53,14 +53,14 @@ function lyket_settings_page()
 // * settings_fields tell the form what to do, as well as a hidden input to make it secure using a nonce. The argument passed to the function is a name for the settings group that will be registered later.
 // * do_settings_sections is the key part of the form, this is where all the sections and fields are output (textboxes, selects, checkboxes etc) so data can be entered by the user. Again, that function argument is arbitrary but needs to be unique. We will use that when registering fields.
 
-// Use to have tabs
-
 function render_lyket_admin()
 {
     ?>
 	    <div class="wrap">
-        <?php do_action('render_tabs'); ?>
-				<?php do_action('render_form'); ?>
+        <div id="icon-options-general" class="icon32"></div>
+
+        <?php do_action('render_lyket_tabs'); ?>
+				<?php do_action('render_lyket_form'); ?>
       </div>
 		<?php
 }
