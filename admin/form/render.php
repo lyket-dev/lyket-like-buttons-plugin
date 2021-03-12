@@ -9,7 +9,6 @@ function render_form($tab)
     ?>
       <div class="wrap">
         <form method="post" action="options.php">
-          <?php echo "lyket_$tab"; ?>
           <?php
             //[[add_settings_section callback is displayed here. For every new section we need to call settings_fields.
             settings_fields("lyket_$tab");
