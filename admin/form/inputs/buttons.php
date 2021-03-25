@@ -158,6 +158,20 @@ function render_highlight_color_input()
     <?php
 }
 
+function render_icon_color_input()
+{
+    global $default_colors;
+    $key = get_key("icon_color"); ?>
+      <input
+        class="color-picker"
+        id=<?php echo $key; ?>
+        name=<?php echo $key; ?>
+        type="text"
+        value="<?php echo get_option($key, $default_colors["icon"]); ?>"
+      />
+    <?php
+}
+
 function render_options($options, $selected)
 {
     foreach ($options as $label => $value) {

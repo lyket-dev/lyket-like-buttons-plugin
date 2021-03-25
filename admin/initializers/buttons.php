@@ -23,7 +23,8 @@ function register_buttons()
     $post_template = get_option("lyket_post_template", 'simple');
     $post_class = $post_template === "simple" ? 'lyket-colors-row' : 'lyket-colors-row lyket-hidden';
 
-    register_post_buttons_field('Counter and icon color', 'lyket_post_text_color', 'render_text_color_input', $post_class);
+    register_post_buttons_field('Counter font color', 'lyket_post_text_color', 'render_text_color_input', $post_class);
+    register_post_buttons_field('Icon color', 'lyket_post_icon_color', 'render_icon_color_input', $post_class);
     register_post_buttons_field('Active like button color', 'lyket_post_primary_color', 'render_primary_color_input', $post_class);
     register_post_buttons_field('Active dislike button color', 'lyket_post_secondary_color', 'render_secondary_color_input', $post_class);
     register_post_buttons_field('Inactive button color', 'lyket_post_background_color', 'render_background_color_input', $post_class);
@@ -45,7 +46,8 @@ function register_buttons()
     $page_template = get_option("lyket_page_template", 'simple');
     $page_class = $page_template === "simple" ? 'lyket-colors-row' : 'lyket-colors-row lyket-hidden';
 
-    register_page_buttons_field('Counter and icon color', 'lyket_page_text_color', 'render_text_color_input', $page_class);
+    register_page_buttons_field('Counter font color', 'lyket_page_text_color', 'render_text_color_input', $page_class);
+    register_page_buttons_field('Icon color', 'lyket_page_icon_color', 'render_icon_color_input', $page_class);
     register_page_buttons_field('Active like button color', 'lyket_page_primary_color', 'render_primary_color_input', $page_class);
     register_page_buttons_field('Active dislike button color', 'lyket_page_secondary_color', 'render_secondary_color_input', $page_class);
     register_page_buttons_field('Inactive button color', 'lyket_page_background_color', 'render_background_color_input', $page_class);
