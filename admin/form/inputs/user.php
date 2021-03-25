@@ -19,7 +19,7 @@ function render_lyket_disable_session_id_input()
         id="lyket_disable_session_id"
         name="lyket_disable_session_id"
         type="checkbox"
-        value="<?php echo get_option('lyket_disable_session_id', false); ?>"
+        <?php echo get_option('lyket_disable_session_id', false) ? 'checked' : ''; ?>
       />
     <?php
 }

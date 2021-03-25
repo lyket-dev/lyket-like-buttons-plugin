@@ -2,6 +2,19 @@
 
 global $active_tab;
 
+function render_enable_input()
+{
+    $key = get_key("enable_buttons");
+    $value = get_option($key, true); ?>
+    <input
+      id=<?php echo $key; ?>
+      name=<?php echo $key; ?>
+      type="checkbox"
+      <?php echo $value ? 'checked' : ''; ?>
+    />
+    <?php
+}
+
 function render_button_type_input()
 {
     $options = array(
