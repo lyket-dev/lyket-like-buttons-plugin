@@ -40,19 +40,6 @@ function lyket_settings_page()
     );
 }
 
-// * render_lyket_admin function renders the form element
-// * settings_fields tell the form what to do, as well as a hidden input to make it secure using a nonce. The argument passed to the function is a name for the settings group that will be registered later.
-// * do_settings_sections is the key part of the form, this is where all the sections and fields are output (textboxes, selects, checkboxes etc) so data can be entered by the user. Again, that function argument is arbitrary but needs to be unique. We will use that when registering fields.
-
-function render_lyket_admin()
-{
-    ?>
-	    <div class="wrap">
-        <?php do_action('render_lyket_tabs'); ?>
-      </div>
-		<?php
-}
-
 // Registers and renders all form inputs
 add_action('admin_init', 'lyket_register_settings');
 

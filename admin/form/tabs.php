@@ -2,9 +2,8 @@
 include dirname(__FILE__) . '/render.php';
 $active_tab;
 
-add_action('render_lyket_tabs', 'render_tabs');
-
-function render_tabs()
+// * render_lyket_admin function renders the form element + tabs
+function render_lyket_admin()
 {
     global $page_name;
     global $active_tab;
@@ -35,8 +34,8 @@ function render_tabs()
           >
             Page Buttons
           </a>
-          <?php do_action('render_lyket_form', $active_tab); ?>
         </div>
+        <?php do_action('render_lyket_form', $active_tab); ?>
     </div>
   <?php
 }
