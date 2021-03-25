@@ -80,6 +80,7 @@ function render_text_color_input()
     global $default_colors;
     $key = get_key("text_color"); ?>
       <input
+        class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
@@ -93,6 +94,7 @@ function render_primary_color_input()
     global $default_colors;
     $key = get_key("primary_color"); ?>
       <input
+        class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
@@ -106,6 +108,7 @@ function render_secondary_color_input()
     global $default_colors;
     $key = get_key("secondary_color"); ?>
       <input
+        class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
@@ -119,6 +122,7 @@ function render_background_color_input()
     global $default_colors;
     $key = get_key("background_color"); ?>
       <input
+        class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
@@ -132,6 +136,7 @@ function render_highlight_color_input()
     global $default_colors;
     $key = get_key("highlight_color"); ?>
       <input
+        class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
