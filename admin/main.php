@@ -1,21 +1,6 @@
 <?php
 
-$page_name = 'lyket-page';
-
-$default_colors = array(
-    "primary" => '#22c1c3',
-    "secondary" => '#ff00c3',
-    "text" => '#292929',
-    "background" => 'rgba(255,255,255, 0)',
-    "highlight" => '#e095ed',
-);
-
-$templates = array(
-    "like" => array("simple", "twitter"),
-    "clap" => array("simple", "medium"),
-    "updown" => array("simple", "reddit")
-);
-
+include dirname(__FILE__) . '/globals/index.php';
 include dirname(__FILE__) . '/form/tabs.php';
 include dirname(__FILE__) . '/initializers/buttons.php';
 include dirname(__FILE__) . '/initializers/api.php';

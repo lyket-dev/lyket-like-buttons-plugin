@@ -7,6 +7,7 @@ add_action('render_lyket_tabs', 'render_tabs');
 function render_tabs()
 {
     global $page_name;
+    global $active_tab;
     $active_tab = isset($_GET["tab"]) ? $_GET["tab"] : "user_settings"; ?>
       <div class="wrap">
         <div class="nav-tab-wrapper">
