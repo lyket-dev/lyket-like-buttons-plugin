@@ -25,14 +25,14 @@ function filter_the_content_in_the_main_loop($content)
             return $content;
         }
 
-        $page_button = page_button();
+        $foo = "<button>dddd</button>";
 
         if ($lk_page_v_align == 'top') {
-            return $page_button . $content;
+            return page_button() . $content;
         } elseif ($lk_page_v_align == 'bottom') {
-            return $content . $page_button;
+            return $content . page_button();
         } else {
-            return $page_button . $content . page_button();
+            return page_button() . $content . page_button();
         }
     }
 
@@ -42,7 +42,8 @@ function filter_the_content_in_the_main_loop($content)
 function page_button()
 {
     global $lk_default_colors, $lk_page_primary, $lk_page_type, $lk_page_text, $lk_page_h_align;
-    global $lk_page_secondary, $lk_page_background, $lk_page_highlight, $lk_page_icon; ?>
+    global $lk_page_secondary, $lk_page_background, $lk_page_highlight, $lk_page_icon;
+    ob_start(); ?>
     <div
       style="text-align: <?php echo $lk_page_h_align ?>;"
       data-lyket-type=<?php echo $lk_page_type ?>
@@ -56,6 +57,7 @@ function page_button()
       data-lyket-color-icon=<?php $lk_page_icon ?>
     ></div>
   <?php
+    return ob_get_clean();
 }
 
 
