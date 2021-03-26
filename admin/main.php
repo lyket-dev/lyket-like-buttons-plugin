@@ -26,15 +26,14 @@ add_action('admin_menu', 'lyket_settings_page');
 
 function lyket_settings_page()
 {
-    global $page_name;
+    global $lk_page_name;
     $logo_url = lyket_absolute_url() . 'public/img/menu_icon.png';
 
-    // add_menu_page(__('Like Buttons', 'likebtn-like-button'), __('Like Buttons', 'likebtn-like-button'), 'manage_options', 'likebtn_buttons', '', $logo_url);
     add_menu_page(
         __('Lyket', 'lyket'),
         __('Lyket', 'lyket'),
         'manage_options',
-        $page_name,
+        $lk_page_name,
         'render_lyket_admin',
         $logo_url
     );

@@ -5,13 +5,13 @@ $active_tab;
 // * render_lyket_admin function renders the form element + tabs
 function render_lyket_admin()
 {
-    global $page_name;
+    global $lk_page_name;
     global $active_tab;
     $active_tab = isset($_GET["tab"]) ? $_GET["tab"] : "user_settings"; ?>
       <div class="wrap">
         <div class="nav-tab-wrapper">
           <a
-            href="?page=<?php echo $page_name; ?>&tab=user_settings"
+            href="?page=<?php echo $lk_page_name; ?>&tab=user_settings"
             class="nav-tab <?php if ($active_tab == 'user_settings') {
         echo 'nav-tab-active';
     } ?> "
@@ -19,7 +19,7 @@ function render_lyket_admin()
             User Settings
           </a>
           <a
-            href="?page=<?php echo $page_name; ?>&tab=post_buttons"
+            href="?page=<?php echo $lk_page_name; ?>&tab=post_buttons"
             class="nav-tab <?php if ($active_tab == 'post_buttons') {
         echo 'nav-tab-active';
     } ?>"
@@ -27,7 +27,7 @@ function render_lyket_admin()
             Post Buttons
           </a>
           <a
-            href="?page=<?php echo $page_name; ?>&tab=page_buttons"
+            href="?page=<?php echo $lk_page_name; ?>&tab=page_buttons"
             class="nav-tab <?php if ($active_tab == 'page_buttons') {
         echo 'nav-tab-active';
     } ?>"

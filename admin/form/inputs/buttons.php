@@ -36,7 +36,7 @@ function render_button_type_input()
 
 function render_template_input()
 {
-    global $templates;
+    global $lk_templates;
     $key = get_key("template");
     $type_key = get_key("button_type");
     $button_type = get_option($type_key, "like");
@@ -46,7 +46,7 @@ function render_template_input()
         name=<?php echo $key; ?>
         required
       >
-        <?php echo render_options($templates[$button_type], $value); ?>
+        <?php echo render_options($lk_templates[$button_type], $value); ?>
       </select>
     <?php
 }
@@ -76,7 +76,7 @@ function render_v_align_input()
     $options = array(
       "Top" => "top",
       "Bottom" => "bottom",
-      "Top and bottom" => "topBottom"
+      "Top and bottom" => "top_bottom"
     );
     $value = get_option($key, "like"); ?>
       <select
@@ -90,84 +90,84 @@ function render_v_align_input()
 }
 function render_text_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("text_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["text"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["text"]); ?>"
       />
     <?php
 }
 
 function render_primary_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("primary_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["primary"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["primary"]); ?>"
       />
     <?php
 }
 
 function render_secondary_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("secondary_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["secondary"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["secondary"]); ?>"
       />
     <?php
 }
 
 function render_background_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("background_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["background"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["background"]); ?>"
       />
     <?php
 }
 
 function render_highlight_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("highlight_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["highlight"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["highlight"]); ?>"
       />
     <?php
 }
 
 function render_icon_color_input()
 {
-    global $default_colors;
+    global $lk_default_colors;
     $key = get_key("icon_color"); ?>
       <input
         class="color-picker"
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         type="text"
-        value="<?php echo get_option($key, $default_colors["icon"]); ?>"
+        value="<?php echo get_option($key, $lk_default_colors["icon"]); ?>"
       />
     <?php
 }

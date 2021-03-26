@@ -17,7 +17,7 @@
 
 include dirname(__FILE__) . '/scripts/load_lyket.php';
 include dirname(__FILE__) . '/admin/main.php';
-// include dirname(__FILE__) . '/plugin/main.php';
+include dirname(__FILE__) . '/app/main.php';
 
 function lyket_absolute_url()
 {
