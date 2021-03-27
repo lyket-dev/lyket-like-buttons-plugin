@@ -14,7 +14,7 @@ function register_buttons()
     //* add_settings_field: renders a new field
     // setting name, display name, callback to print form element, page in which field is displayed, section to which it belongs.
     //* register_setting: registers a certain setting section name, form element name, callback for sanitization
-    register_post_buttons_field('Enable buttons for posts', 'lyket_post_enable_buttons', 'render_enable_input');
+    register_post_buttons_field('Enable buttons for posts', 'lyket_post_enable', 'render_enable_input');
     register_post_buttons_field('Button type', 'lyket_post_button_type', 'render_button_type_input');
     register_post_buttons_field('Template', 'lyket_post_template', 'render_template_input');
     register_post_buttons_field('Horizontal alignment', 'lyket_post_h_align', 'render_h_align_input');
@@ -37,7 +37,7 @@ function register_buttons()
         'lyket_page_buttons'
     );
 
-    register_page_buttons_field('Enable buttons for pages', 'lyket_page_enable_buttons', 'render_enable_input');
+    register_page_buttons_field('Enable buttons for pages', 'lyket_page_enable', 'render_enable_input');
     register_page_buttons_field('Button type', 'lyket_page_button_type', 'render_button_type_input');
     register_page_buttons_field('Template', 'lyket_page_template', 'render_template_input');
     register_page_buttons_field('Horizontal alignment', 'lyket_page_h_align', 'render_h_align_input');

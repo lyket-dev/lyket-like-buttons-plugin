@@ -4,7 +4,7 @@ global $active_tab;
 
 function render_enable_input()
 {
-    $key = get_key("enable_buttons");
+    $key = get_key("enable");
     $value = get_option($key, true); ?>
     <input
       id=<?php echo $key; ?>
