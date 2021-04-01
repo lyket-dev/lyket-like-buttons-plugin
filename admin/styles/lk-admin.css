@@ -23,6 +23,7 @@ tr.lyket-hidden {
 }
 
 .lk-flex__fixed {
+  border-radius: 3px;
   width: 250px;
   padding: 24px;
   max-width: 300px;

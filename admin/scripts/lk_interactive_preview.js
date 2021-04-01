@@ -1,9 +1,3 @@
-const options = {
-  like: ["simple", "twitter"],
-  clap: ["simple", "medium"],
-  updown: ["simple", "reddit"]
-};
-
 jQuery(document).ready(function($) {
   $("select#lyket_page_button_type").on("change", function() {
     changeTemplateOptions("page", this.value, $);
@@ -20,13 +14,13 @@ jQuery(document).ready(function($) {
   });
 
   $("select#lyket_post_template").on("change", function() {
-    toggleColors(this.value === "simple", $);
+    toggleColors(supportTheme.includes(this.value), $);
 
     $("div#lyket_preview").attr("data-lyket-template", this.value);
   });
 
   $("select#lyket_page_template").on("change", function() {
-    toggleColors(this.value === "simple", $);
+    toggleColors(supportTheme.includes(this.value), $);
 
     $("div#lyket_preview").attr("data-lyket-template", this.value);
   });
@@ -40,8 +34,8 @@ const changeTemplateOptions = (key, button, $) => {
   $.each(options[button], function(_key, value) {
     template.append(
       $("<option></option>")
-        .attr("value", value)
-        .text(value)
+        .attr("value", value.key)
+        .text(value.label)
     );
   });
 
@@ -57,3 +51,50 @@ const toggleColors = (shouldShow, $) => {
       : input.classList.add("lyket-hidden");
   });
 };
+
+const options = {
+  like: [
+    {
+      label: "Simple",
+      key: "simple"
+    },
+    {
+      label: "Twitter",
+      key: "twitter"
+    },
+    {
+      label: "Chevron",
+      key: "chevron"
+    }
+  ],
+  clap: [
+    {
+      label: "Simple",
+      key: "simple"
+    },
+    {
+      label: "Medium",
+      key: "medium"
+    },
+    {
+      label: "Heart",
+      key: "heart"
+    }
+  ],
+  updown: [
+    {
+      label: "Simple",
+      key: "simple"
+    },
+    {
+      label: "Reddit",
+      key: "reddit"
+    },
+    {
+      label: "Chevron",
+      key: "chevron"
+    }
+  ]
+};
+
+const supportTheme = ["simple", "chevron", "heart"];

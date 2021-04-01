@@ -22,6 +22,14 @@ function enqueue_color_picker($hook_suffix)
     wp_enqueue_script('wp_color_picker', plugin_dir_url(__FILE__) . 'scripts/wp_color_picker.js', array( 'wp-color-picker' ), false, true);
 }
 
+add_action('admin_enqueue_scripts', 'enqueue_lk_interactive_preview');
+
+function enqueue_lk_interactive_preview($hook_suffix)
+{
+    wp_enqueue_style('lk_interactive_preview');
+    wp_enqueue_script('lk_interactive_preview', plugin_dir_url(__FILE__) . 'scripts/lk_interactive_preview.js');
+}
+
 // Creates menu item in navbar and page that will contain the settings form
 add_action('admin_menu', 'lyket_settings_page');
 
