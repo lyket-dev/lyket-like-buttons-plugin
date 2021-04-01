@@ -1,0 +1,35 @@
+.lyket-preview {
+  padding: 24px 0 24px 0;
+  text-align: center;
+  max-width: 300px;
+  margin: 24px auto 12px auto;
+}
+
+.lyket-colors-row {
+  display: table-row;
+}
+
+tr.lyket-hidden {
+  display: none;
+}
+
+.lk-flex {
+  display: flex;
+}
+
+.lk-flex__float {
+  flex: 1;
+  padding: 24px;
+}
+
+.lk-flex__fixed {
+  width: 250px;
+  padding: 24px;
+  max-width: 300px;
+  margin: 24px auto;
+  background-color: white;
+}
+
+.lk-flex__fixed h4 {
+  margin-top: 0;
+}

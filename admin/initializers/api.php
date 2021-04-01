@@ -11,12 +11,16 @@ function register_lyket_user_settings()
     );
 
     register_user_settings_field('API key', 'lyket_api_key', 'render_lyket_api_key_input');
-    register_user_settings_field('Disable Session ID', 'lyket_disable_session_id', 'render_lyket_disable_session_id_input');
+    register_user_settings_field('Recognize visitor by IP instead of ID', 'lyket_disable_session_id', 'render_lyket_disable_session_id_input');
 }
 
 function render_user_settings_section()
 {
-    echo '<p>Configure Lyket user settings</p>';
+  echo '<div>
+      <p>
+      To use Lyket you need to register to <a href="https://app.lyket.dev/signup" target="_blank">our website</a>. Then copy and paste your API key here!
+    </div>
+  ';
 }
 
 function register_user_settings_field($name, $key, $render_function) {

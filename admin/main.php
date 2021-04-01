@@ -5,12 +5,13 @@ include dirname(__FILE__) . '/form/tabs.php';
 include dirname(__FILE__) . '/initializers/buttons.php';
 include dirname(__FILE__) . '/initializers/api.php';
 
+
 add_action('admin_enqueue_scripts', 'enqueue_admin_style');
 
 function enqueue_admin_style()
 {
+    wp_register_style('lyket_admin_style', plugin_dir_url(__FILE__) . 'styles/lk-admin.css', false);
     wp_enqueue_style('lyket_admin_style');
-    wp_register_style('lyket_admin_style', plugin_dir_url(__FILE__) . 'styles/admin.css', false);
 }
 
 add_action('admin_enqueue_scripts', 'enqueue_color_picker');

@@ -6,9 +6,9 @@
     * @package WordPress
     * @since 1.0.0
     *
-    * Plugin Name: Lyket ♥ like buttons
+    * Plugin Name: Lyket like buttons
     * Plugin URI: https://lyket.dev/wordpress-like-button-plugin
-    * Description: Add stylish like, clap and like/dislike buttons to your website!
+    * Description: Add beautiful like, clap and like/dislike buttons to your website!
     * Version: 1.0
     * Author: Lyket
     * Author URI: https://lyket.dev
