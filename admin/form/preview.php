@@ -17,6 +17,7 @@ function lk_render_post_button_preview()
       data-lyket-color-highlight=<?php echo $lk_post_highlight ?>
       data-lyket-color-icon=<?php echo $lk_post_icon ?>
     ></div>
+    <p class="lk-image__caption">This is a preview of your post buttons.</p>
   <?php
 }
 
@@ -37,5 +38,6 @@ function lk_render_page_button_preview()
       data-lyket-color-highlight=<?php echo $lk_page_highlight ?>
       data-lyket-color-icon=<?php echo $lk_page_icon ?>
     ></div>
+    <p class="lk-image__caption">This is a preview of your page buttons.</p>
   <?php
 }

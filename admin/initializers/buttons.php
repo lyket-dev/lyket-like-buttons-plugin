@@ -23,10 +23,10 @@ function register_buttons()
 
     register_post_buttons_field('Counter font color', 'lyket_post_text_color', 'render_text_color_input', $post_class . " lk-text");
     register_post_buttons_field('Icon color', 'lyket_post_icon_color', 'render_icon_color_input', $post_class . " lk-icon");
-    register_post_buttons_field('Active like button color', 'lyket_post_primary_color', 'render_primary_color_input', $post_class . " lk-primary");
-    register_post_buttons_field('Active dislike button color', 'lyket_post_secondary_color', 'render_secondary_color_input', $post_class . " lk-secondary");
+    register_post_buttons_field('Pressed like button color', 'lyket_post_primary_color', 'render_primary_color_input', $post_class . " lk-primary");
+    register_post_buttons_field('Pressed dislike button color', 'lyket_post_secondary_color', 'render_secondary_color_input', $post_class . " lk-secondary");
     register_post_buttons_field('Inactive button color', 'lyket_post_background_color', 'render_background_color_input', $post_class . " lk-background");
-    register_post_buttons_field('Highlight color', 'lyket_post_highlight_color', 'render_highlight_color_input', $post_class . " lk-highlight");
+    register_post_buttons_field('Animation color', 'lyket_post_highlight_color', 'render_highlight_color_input', $post_class . " lk-highlight");
     register_post_buttons_field('Horizontal alignment', 'lyket_post_h_align', 'render_h_align_input');
     register_post_buttons_field('Vertical alignment', 'lyket_post_v_align', 'render_v_align_input');
 
@@ -46,10 +46,10 @@ function register_buttons()
 
     register_page_buttons_field('Counter font color', 'lyket_page_text_color', 'render_text_color_input', $page_class . " lk-text");
     register_page_buttons_field('Icon color', 'lyket_page_icon_color', 'render_icon_color_input', $page_class . " lk-icon");
-    register_page_buttons_field('Active like button color', 'lyket_page_primary_color', 'render_primary_color_input', $page_class . " lk-primary");
-    register_page_buttons_field('Active dislike button color', 'lyket_page_secondary_color', 'render_secondary_color_input', $page_class . " lk-secondary");
+    register_page_buttons_field('Pressed like button color', 'lyket_page_primary_color', 'render_primary_color_input', $page_class . " lk-primary");
+    register_page_buttons_field('Pressed dislike button color', 'lyket_page_secondary_color', 'render_secondary_color_input', $page_class . " lk-secondary");
     register_page_buttons_field('Inactive button color', 'lyket_page_background_color', 'render_background_color_input', $page_class . " lk-background");
-    register_page_buttons_field('Highlight color', 'lyket_page_highlight_color', 'render_highlight_color_input', $page_class . " lk-highlight");
+    register_page_buttons_field('Animation color', 'lyket_page_highlight_color', 'render_highlight_color_input', $page_class . " lk-highlight");
     register_page_buttons_field('Horizontal alignment', 'lyket_page_h_align', 'render_h_align_input');
     register_page_buttons_field('Vertical alignment', 'lyket_page_v_align', 'render_v_align_input');
 }

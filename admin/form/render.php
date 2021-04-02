@@ -33,6 +33,31 @@ function render_form($tab)
             </form>
           </div>
           <div class="lk-flex__fixed">
+            <div class="lk-box__icon">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+               width="522.000000pt" height="120.000000pt" viewBox="0 0 522.000000 120.000000"
+               preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)"
+                fill="#000000" stroke="none">
+                <path d="M20 585 l0 -575 420 0 420 0 0 105 0 105 -117 0 c-65 0 -196 3 -290
+                7 l-173 6 0 464 0 463 -130 0 -130 0 0 -575z"/>
+                <path d="M750 1152 c0 -5 97 -170 215 -366 l215 -358 0 -209 0 -209 135 0 135
+                0 0 208 0 207 193 320 c106 176 206 341 221 368 l28 47 -130 0 -129 0 -149
+                -250 c-82 -137 -153 -248 -158 -247 -6 2 -77 114 -159 250 l-148 247 -135 0
+                c-74 0 -134 -4 -134 -8z"/>
+                <path d="M2000 585 l0 -575 130 0 130 0 0 144 0 144 76 81 c42 45 79 81 83 81
+                4 0 89 -101 189 -225 l183 -225 144 0 c79 0 146 3 148 8 3 4 -105 146 -239
+                316 -134 170 -244 312 -244 315 0 4 96 110 213 237 116 127 221 241 231 253
+                l19 21 -145 0 -145 0 -243 -257 c-134 -142 -250 -262 -257 -266 -11 -6 -13 42
+                -13 258 l0 265 -130 0 -130 0 0 -575z"/>
+                <path d="M3220 585 l0 -575 445 0 445 0 0 105 0 105 -312 2 -313 3 -3 133 -3
+                132 271 0 270 0 0 105 0 105 -270 0 -270 0 0 125 0 125 305 0 305 0 0 105 0
+                105 -435 0 -435 0 0 -575z"/>
+                <path d="M4200 1055 l0 -105 183 -2 182 -3 3 -467 2 -468 130 0 130 0 2 468 3
+                467 183 3 182 2 0 105 0 105 -500 0 -500 0 0 -105z"/>
+                </g>
+              </svg>
+            </div>
             <?php if ($active_tab == 'user_settings') : ?>
               <h4>Registration</h4>
               <p>
@@ -50,7 +75,7 @@ function render_form($tab)
               </div>
             <?php endif; ?>
             <h4>About</h4>
-            <p>Read the full documentation on <a href="https://app.lyket.dev/signup" target="_blank">the official website</a>, to know more about Lyket options</p>
+            <p>Read the full documentation on <a href="https://app.lyket.dev/signup" target="_blank">the official website</a> to know more about Lyket buttons options.</p>
             <h4>Support</h4>
             <p>If you are having issues don't hesitate to contact <a href="https://lyket.dev/contact" target="_blank">Lyket's support</a>, we are happy to help you!</p>
           </div>

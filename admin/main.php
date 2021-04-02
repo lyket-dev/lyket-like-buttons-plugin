@@ -41,8 +41,8 @@ function lyket_settings_page()
     $logo_url = lyket_absolute_url() . 'public/img/menu_icon.png';
 
     add_menu_page(
-        __('Lyket', 'lyket'),
-        __('Lyket', 'lyket'),
+        __('Lyket like buttons', 'lyket'),
+        __('Lyket like buttons', 'lyket'),
         'manage_options',
         $lk_page_name,
         'render_lyket_admin',
