@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 
       $("div#lyket-preview").attr(
         `data-lyket-color-${name}`,
-        ui.color.toString()
+        ui.color.toCSS("rgb")
       );
     }
   });
