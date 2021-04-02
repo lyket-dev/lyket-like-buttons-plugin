@@ -50,7 +50,8 @@ function lk_render_page_button()
 {
     global $lk_default_colors, $lk_page_primary, $lk_page_type, $lk_page_text, $lk_page_h_align;
     global $lk_page_secondary, $lk_page_background, $lk_page_highlight, $lk_page_icon, $lk_page_template;
-    $post_slug = get_post_field('post_name', get_post()); ?>
+    $post_slug = get_post_field('post_name', get_post());
+    ob_start(); ?>
     <div
       data-lyket-namespace="pages"
       data-lyket-template=<?php echo $lk_page_template ?>
@@ -65,6 +66,7 @@ function lk_render_page_button()
       data-lyket-color-icon=<?php echo $lk_page_icon ?>
     ></div>
   <?php
+  return ob_get_clean();
 }
 
 function lk_render_post_button()
@@ -72,7 +74,8 @@ function lk_render_post_button()
     global $lk_default_colors, $lk_post_primary, $lk_post_type, $lk_post_text, $lk_post_h_align;
     global $lk_post_secondary, $lk_post_background, $lk_post_highlight, $lk_post_icon, $lk_post_template;
 
-    $post_slug = get_post_field('post_name', get_post()); ?>
+    $post_slug = get_post_field('post_name', get_post());
+    ob_start(); ?>
     <div
       data-lyket-namespace="posts"
       data-lyket-template=<?php echo $lk_post_template ?>
@@ -87,6 +90,7 @@ function lk_render_post_button()
       data-lyket-color-icon=<?php echo $lk_post_icon ?>
     ></div>
   <?php
+  return ob_get_clean();
 }
 
 function lk_render_post_button_excerpt()

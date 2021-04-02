@@ -1,5 +1,6 @@
 === Lyket like buttons ===
 Contributors: souljuse
+Website: https://lyket.dev
 Registration link: https://app.lyket.dev/signup
 Tags: like button, clap button, like/dislike button
 Requires at least: 1.0
@@ -20,13 +21,12 @@ Read the full documentation on [the official page](https://lyket.dev/docs/wordpr
 
 = Do I need to register? =
 
-To use Lyket you need to signup on [the official page](https://app.lyket.dev/signup), and copy your API key in WordPress.
+Yes, to use Lyket you need to signup on [the official page](https://app.lyket.dev/signup), and copy your API key in Lyket's plugin settings in WordPress.
 
 = Can I suggest any changes or report bugs? =
 
 Of course! Feel free to write to our [support](mailto:lyket.dev@gmail.com)
 
-
 == Changelog ==
 
-Changes are thoroughly documented on [the official repo](https://github.com/lyket-dev/lyket/blob/master/CHANGELOG.md)
+Changes are thoroughly documented on [the official repo of the project](https://github.com/lyket-dev/lyket/blob/master/CHANGELOG.md)
