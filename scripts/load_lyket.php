@@ -3,10 +3,11 @@
 function load_lyket()
 {
     $disable = get_option('lyket_disable_session_id', false);
-    $api_key = get_option('lyket_api_key', false); ?>
+    $api_key = get_option('lyket_api_key', false);
+    $url = "https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=" . $api_key; ?>
     <script
       type="text/javascript"
-      src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa&baseUrl=http://localhost:3000"
+      src=<?php echo $url ?>
       ></script>
     <?php
 }
