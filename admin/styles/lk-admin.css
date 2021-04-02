@@ -1,8 +1,22 @@
-.lyket-preview {
-  padding: 24px 0 24px 0;
-  text-align: center;
+.lk-admin-container {
+  background-color: white;
+  box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
+    0 2.2px 5.3px rgba(0, 0, 0, 0.028), 0 4.1px 10px rgba(0, 0, 0, 0.035),
+    0 7.4px 17.9px rgba(0, 0, 0, 0.042), 0 13.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 33px 80px rgba(0, 0, 0, 0.07);
+  padding: 40px;
+  border-radius: 3px;
+}
+
+#lyket-preview {
   max-width: 300px;
-  margin: 24px auto 12px auto;
+  border-radius: 3px;
+  width: 250px;
+  padding: 24px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  border: 1px solid lightgrey;
 }
 
 .lyket-colors-row {
@@ -19,18 +33,39 @@ tr.lyket-hidden {
 
 .lk-flex__float {
   flex: 1;
-  padding: 24px;
 }
 
 .lk-flex__fixed {
+  padding: 24px;
   border-radius: 3px;
   width: 250px;
-  padding: 24px;
   max-width: 300px;
   margin: 24px auto;
   background-color: white;
+  box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
+    0 2.2px 5.3px rgba(0, 0, 0, 0.028), 0 4.1px 10px rgba(0, 0, 0, 0.035),
+    0 7.4px 17.9px rgba(0, 0, 0, 0.042), 0 13.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 33px 80px rgba(0, 0, 0, 0.07);
 }
 
 .lk-flex__fixed h4 {
   margin-top: 0;
+}
+
+.lyket .nav-tab-wrapper {
+  border: none;
+}
+.lyket .nav-tab {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: none;
+}
+
+.lyket .nav-tab-active {
+  background-color: white;
+}
+
+.lyket .wp-color-result-text,
+.lyket .wp-core-ui button {
+  color: #292929;
 }

@@ -8,7 +8,7 @@ function render_lyket_admin()
     global $lk_page_name;
     global $active_tab;
     $active_tab = isset($_GET["tab"]) ? $_GET["tab"] : "user_settings"; ?>
-      <div class="wrap">
+      <div class="lyket wrap">
         <div class="nav-tab-wrapper">
           <a
             href="?page=<?php echo $lk_page_name; ?>&tab=user_settings"

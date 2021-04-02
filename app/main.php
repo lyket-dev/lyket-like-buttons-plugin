@@ -1,20 +1,6 @@
 <?php
-
 add_filter('the_content', 'filter_content_in_the_main_loop', 1);
 add_filter('the_excerpt', 'filter_content_in_the_main_loop', 1);
-add_action('wp_head', 'lyket_header_script');
-
-function lyket_header_script()
-{
-    $disable = get_option('lyket_disable_session_id', false);
-    $api_key = get_option('lyket_api_key', false);
-    $key = get_key("button_type"); ?>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=acc0dbccce8e557db5ebbe6d605aaa&baseUrl=http://localhost:3000"
-      ></script>
-    <?php
-}
 
 function filter_content_in_the_main_loop($content)
 {
@@ -53,7 +39,7 @@ function filter_content_in_the_main_loop($content)
                 return $content;
             }
 
-            return lk_render_post_button() . $content;
+            return lk_render_post_button_excerpt() . $content;
         }
     }
 
@@ -63,44 +49,64 @@ function filter_content_in_the_main_loop($content)
 function lk_render_page_button()
 {
     global $lk_default_colors, $lk_page_primary, $lk_page_type, $lk_page_text, $lk_page_h_align;
-    global $lk_page_secondary, $lk_page_background, $lk_page_highlight, $lk_page_icon;
-    $post_slug = get_post_field('post_name', get_post());
-
-    ob_start(); ?>
+    global $lk_page_secondary, $lk_page_background, $lk_page_highlight, $lk_page_icon, $lk_page_template;
+    $post_slug = get_post_field('post_name', get_post()); ?>
     <div
+      data-lyket-namespace="pages"
+      data-lyket-template=<?php echo $lk_page_template ?>
       style="text-align: <?php echo $lk_page_h_align ?>;"
       data-lyket-type=<?php echo $lk_page_type ?>
       data-lyket-id=<?php echo $post_slug ?>
-      data-lyket-namespace="pages"
-      data-lyket-color-text=<?php $lk_page_text ?>
-      data-lyket-color-primary=<?php $lk_page_primary ?>
-      data-lyket-color-secondary=<?php $lk_page_secondary ?>
-      data-lyket-color-background=<?php $lk_page_background ?>
-      data-lyket-color-highlight=<?php $lk_page_highlight ?>
-      data-lyket-color-icon=<?php $lk_page_icon ?>
+      data-lyket-color-text=<?php echo $lk_page_text ?>
+      data-lyket-color-primary=<?php echo $lk_page_primary ?>
+      data-lyket-color-secondary=<?php echo $lk_page_secondary ?>
+      data-lyket-color-background=<?php echo $lk_page_background ?>
+      data-lyket-color-highlight=<?php echo $lk_page_highlight ?>
+      data-lyket-color-icon=<?php echo $lk_page_icon ?>
     ></div>
   <?php
-    return ob_get_clean();
 }
 
 function lk_render_post_button()
 {
     global $lk_default_colors, $lk_post_primary, $lk_post_type, $lk_post_text, $lk_post_h_align;
-    global $lk_post_secondary, $lk_post_background, $lk_post_highlight, $lk_post_icon;
-    $post_slug = get_post_field('post_name', get_post());
-    ob_start(); ?>
+    global $lk_post_secondary, $lk_post_background, $lk_post_highlight, $lk_post_icon, $lk_post_template;
+
+    $post_slug = get_post_field('post_name', get_post()); ?>
     <div
+      data-lyket-namespace="posts"
+      data-lyket-template=<?php echo $lk_post_template ?>
       style="text-align: <?php echo $lk_post_h_align ?>;"
       data-lyket-type=<?php echo $lk_post_type ?>
       data-lyket-id=<?php echo $post_slug ?>
-      data-lyket-namespace="posts"
-      data-lyket-color-text=<?php $lk_post_text ?>
-      data-lyket-color-primary=<?php $lk_post_primary ?>
-      data-lyket-color-secondary=<?php $lk_post_secondary ?>
-      data-lyket-color-background=<?php $lk_post_background ?>
-      data-lyket-color-highlight=<?php $lk_post_highlight ?>
-      data-lyket-color-icon=<?php $lk_post_icon ?>
+      data-lyket-color-text=<?php echo $lk_post_text ?>
+      data-lyket-color-primary=<?php echo $lk_post_primary ?>
+      data-lyket-color-secondary=<?php echo $lk_post_secondary ?>
+      data-lyket-color-background=<?php echo $lk_post_background ?>
+      data-lyket-color-highlight=<?php echo $lk_post_highlight ?>
+      data-lyket-color-icon=<?php echo $lk_post_icon ?>
     ></div>
   <?php
-    return ob_get_clean();
+}
+
+function lk_render_post_button_excerpt()
+{
+    global $lk_default_colors, $lk_post_primary, $lk_post_type, $lk_post_text, $lk_post_h_align;
+    global $lk_post_secondary, $lk_post_background, $lk_post_highlight, $lk_post_icon, $lk_post_template;
+
+    $post_slug = get_post_field('post_name', get_post()); ?>
+    <div
+      data-lyket-namespace="posts"
+      style="text-align: center;"
+      data-lyket-template=<?php echo $lk_post_template ?>
+      data-lyket-type=<?php echo $lk_post_type ?>
+      data-lyket-id=<?php echo $post_slug ?>
+      data-lyket-color-text=<?php echo $lk_post_text ?>
+      data-lyket-color-primary=<?php echo $lk_post_primary ?>
+      data-lyket-color-secondary=<?php echo $lk_post_secondary ?>
+      data-lyket-color-background=<?php echo $lk_post_background ?>
+      data-lyket-color-highlight=<?php echo $lk_post_highlight ?>
+      data-lyket-color-icon=<?php echo $lk_post_icon ?>
+    ></div>
+  <?php
 }

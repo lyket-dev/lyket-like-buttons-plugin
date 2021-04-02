@@ -2,27 +2,27 @@ jQuery(document).ready(function($) {
   $("select#lyket_page_button_type").on("change", function() {
     changeTemplateOptions("page", this.value, $);
 
-    $("div#lyket_preview").attr("data-lyket-type", this.value);
-    $("div#lyket_preview").attr("data-lyket-template", "simple");
+    $("div#lyket-preview").attr("data-lyket-type", this.value);
+    $("div#lyket-preview").attr("data-lyket-template", "simple");
   });
 
   $("select#lyket_post_button_type").on("change", function() {
     changeTemplateOptions("post", this.value, $);
 
-    $("div#lyket_preview").attr("data-lyket-type", this.value);
-    $("div#lyket_preview").attr("data-lyket-template", "simple");
+    $("div#lyket-preview").attr("data-lyket-type", this.value);
+    $("div#lyket-preview").attr("data-lyket-template", "simple");
   });
 
   $("select#lyket_post_template").on("change", function() {
     toggleColors(supportTheme.includes(this.value), $);
 
-    $("div#lyket_preview").attr("data-lyket-template", this.value);
+    $("div#lyket-preview").attr("data-lyket-template", this.value);
   });
 
   $("select#lyket_page_template").on("change", function() {
     toggleColors(supportTheme.includes(this.value), $);
 
-    $("div#lyket_preview").attr("data-lyket-template", this.value);
+    $("div#lyket-preview").attr("data-lyket-template", this.value);
   });
 });
 

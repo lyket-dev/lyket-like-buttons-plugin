@@ -22,6 +22,13 @@ function enqueue_color_picker($hook_suffix)
     wp_enqueue_script('wp_color_picker', plugin_dir_url(__FILE__) . 'scripts/wp_color_picker.js', array( 'wp-color-picker' ), false, true);
 }
 
+wp_add_inline_script(
+    'wp-color-picker-alpha',
+    'jQuery( function() { jQuery( ".lk-color-picker" ).wpColorPicker(); } );'
+);
+
+wp_enqueue_script('wp-color-picker-alpha');
+
 add_action('admin_enqueue_scripts', 'enqueue_lk_interactive_preview');
 
 function enqueue_lk_interactive_preview($hook_suffix)
