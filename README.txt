@@ -4,7 +4,7 @@ Website: https://lyket.dev
 Registration link: https://app.lyket.dev/signup
 Tags: like button, clap button, like/dislike button
 Requires at least: 1.0
-Tested up to: 1.0
+Tested up to: 5.7
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

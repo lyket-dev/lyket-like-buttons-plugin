@@ -1,6 +1,6 @@
 <?php
 
-global $active_tab;
+global $lk_active_tab;
 
 function render_enable_input()
 {
@@ -191,9 +191,9 @@ function render_options($options, $selected)
 
 function get_key($value)
 {
-    global $active_tab;
+    global $lk_active_tab;
 
-    $context = str_replace("_buttons", "", $active_tab);
+    $context = str_replace("_buttons", "", $lk_active_tab);
     $key = "lyket_${context}_${value}";
     return $key;
 }

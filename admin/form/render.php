@@ -8,12 +8,11 @@ add_action('render_lyket_form', 'render_form');
 // * settings_fields tell the form what to do, as well as a hidden input to make it secure using a nonce. The argument passed to the function is a name for the settings group that will be registered later.
 function render_form($tab)
 {
-    global $active_tab;
-    $active_tab = isset($_GET["tab"]) ? $_GET["tab"] : "user_settings"; ?>
+    global $lk_active_tab; ?>
         <div class="lk-admin-container">
-          <?php if ($active_tab == 'post_buttons') : ?>
+          <?php if ($lk_active_tab == 'post_buttons') : ?>
             <?php lk_render_post_button_preview(); ?>
-          <?php elseif ($active_tab == 'page_buttons') : ?>
+          <?php elseif ($lk_active_tab == 'page_buttons') : ?>
             <?php lk_render_page_button_preview(); ?>
           <?php endif; ?>
 
@@ -58,12 +57,12 @@ function render_form($tab)
                 </g>
               </svg>
             </div>
-            <?php if ($active_tab == 'user_settings') : ?>
+            <?php if ($lk_active_tab == 'user_settings') : ?>
               <h4>Registration</h4>
               <p>
                 Register to <a href="https://app.lyket.dev/signup" target="_blank">our website</a> and paste your personal API in the form.
               </p>
-              <p>Check the disable ID option to make your buttons fully GDPR compliant</p>
+              <!-- <p>Check the disable ID option to make your buttons fully GDPR compliant</p> -->
               <h4>Pricing</h4>
               <div>
                 <p>Lyket charges you only if your website is successful! Pricing is based on your website visualizations and it is billed yearly</p>
