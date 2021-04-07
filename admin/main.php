@@ -14,9 +14,9 @@ function enqueue_admin_style()
     wp_enqueue_style('lyket_admin_style');
 }
 
-add_action('admin_enqueue_scripts', 'enqueue_lk_scripts');
+add_action('admin_enqueue_scripts', 'enqueue_lyket_scripts');
 
-function enqueue_lk_scripts($hook_suffix)
+function enqueue_lyket_scripts($hook_suffix)
 {
     // --------------- alpha color picker ---------------
     wp_enqueue_style('wp-color-picker');
@@ -24,12 +24,12 @@ function enqueue_lk_scripts($hook_suffix)
     wp_register_script('wp-color-picker-alpha', plugin_dir_url(__FILE__) . 'scripts/wp_color_picker_alpha.js', array( 'wp-color-picker' ));
     wp_enqueue_script('wp-color-picker-alpha');
 
-    wp_register_script('lk_color_picker', plugin_dir_url(__FILE__) . 'scripts/wp_color_picker.js', array( 'wp-color-picker' ));
-    wp_enqueue_script('lk_color_picker');
+    wp_register_script('lyket_color_picker', plugin_dir_url(__FILE__) . 'scripts/wp_color_picker.js', array( 'wp-color-picker' ));
+    wp_enqueue_script('lyket_color_picker');
 
     // --------------- lyket preview ---------------
-    wp_enqueue_style('lk_interactive_preview');
-    wp_enqueue_script('lk_interactive_preview', plugin_dir_url(__FILE__) . 'scripts/lk_interactive_preview.js');
+    wp_enqueue_style('lyket_interactive_preview');
+    wp_enqueue_script('lyket_interactive_preview', plugin_dir_url(__FILE__) . 'scripts/lyket_interactive_preview.js');
 }
 
 // Creates menu item in navbar and page that will contain the settings form
@@ -37,14 +37,14 @@ add_action('admin_menu', 'lyket_settings_page');
 
 function lyket_settings_page()
 {
-    global $lk_page_name;
+    global $lyket_page_name;
     $logo_url = lyket_absolute_url() . 'public/img/menu_icon.png';
 
     add_menu_page(
         __('Lyket like buttons', 'lyket'),
         __('Lyket like buttons', 'lyket'),
         'manage_options',
-        $lk_page_name,
+        $lyket_page_name,
         'render_lyket_admin',
         $logo_url
     );
