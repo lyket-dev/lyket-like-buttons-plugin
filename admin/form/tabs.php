@@ -2,8 +2,8 @@
 include dirname(__FILE__) . '/render.php';
 $lyket_active_tab;
 
-// * render_lyket_admin function renders the form element + tabs
-function render_lyket_admin()
+// * lyket_render_admin function renders the form element + tabs
+function lyket_render_admin()
 {
     global $lyket_page_name;
     global $lyket_active_tab;

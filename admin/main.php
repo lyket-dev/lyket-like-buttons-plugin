@@ -6,17 +6,17 @@ include dirname(__FILE__) . '/initializers/buttons.php';
 include dirname(__FILE__) . '/initializers/api.php';
 
 
-add_action('admin_enqueue_scripts', 'enqueue_admin_style');
+add_action('admin_enqueue_scripts', 'lyket_enqueue_admin_style');
 
-function enqueue_admin_style()
+function lyket_enqueue_admin_style()
 {
-    wp_register_style('lyket_admin_style', plugin_dir_url(__FILE__) . 'styles/lk-admin.css', false);
+    wp_register_style('lyket_admin_style', plugin_dir_url(__FILE__) . 'styles/lyket_admin.css', false);
     wp_enqueue_style('lyket_admin_style');
 }
 
-add_action('admin_enqueue_scripts', 'enqueue_lyket_scripts');
+add_action('admin_enqueue_scripts', 'lyket_enqueue_scripts');
 
-function enqueue_lyket_scripts($hook_suffix)
+function lyket_enqueue_scripts($hook_suffix)
 {
     // --------------- alpha color picker ---------------
     wp_enqueue_style('wp-color-picker');
@@ -45,7 +45,7 @@ function lyket_settings_page()
         __('Lyket like buttons', 'lyket'),
         'manage_options',
         $lyket_page_name,
-        'render_lyket_admin',
+        'lyket_render_admin',
         $logo_url
     );
 }

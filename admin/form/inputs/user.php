@@ -1,5 +1,5 @@
 <?php
-function render_lyket_api_key_input()
+function lyket_render_api_key_input()
 {
     ?>
       <input
@@ -12,7 +12,7 @@ function render_lyket_api_key_input()
     <?php
 }
 
-function render_lyket_disable_session_id_input()
+function lyket_render_disable_session_id_input()
 {
     ?>
       <input

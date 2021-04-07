@@ -10,8 +10,8 @@ function register_lyket_user_settings()
         'lyket_user_settings'
     );
 
-    lyket_register_user_settings_field('API key', 'lyket_api_key', 'render_lyket_api_key_input');
-    // lyket_register_user_settings_field('Recognize visitor by IP instead of ID', 'lyket_disable_session_id', 'render_lyket_disable_session_id_input');
+    lyket_register_user_settings_field('API key', 'lyket_api_key', 'lyket_render_api_key_input');
+    // lyket_register_user_settings_field('Recognize visitor by IP instead of ID', 'lyket_disable_session_id', 'lyket_render_disable_session_id_input');
 }
 
 function lyket_render_user_settings_section()

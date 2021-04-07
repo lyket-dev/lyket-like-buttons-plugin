@@ -2,9 +2,9 @@
 
 global $lyket_active_tab;
 
-function render_enable_input()
+function lyket_render_enable_input()
 {
-    $key = get_key("enable");
+    $key = lyket_get_key("enable");
     $value = get_option($key, true); ?>
     <input
       id=<?php echo $key; ?>
@@ -15,30 +15,30 @@ function render_enable_input()
     <?php
 }
 
-function render_button_type_input()
+function lyket_render_button_type_input()
 {
     $options = array(
       "Like" => "like",
       "Like/dislike" => "updown",
       "Clap" => "clap"
     );
-    $key = get_key("button_type");
+    $key = lyket_get_key("button_type");
     $value = get_option($key, "like"); ?>
       <select
         id=<?php echo $key; ?>
         name=<?php echo $key; ?>
         required
       >
-        <?php echo render_options($options, $value); ?>
+        <?php echo lyket_render_options($options, $value); ?>
       </select>
     <?php
 }
 
-function render_template_input()
+function lyket_render_template_input()
 {
     global $lyket_templates;
-    $key = get_key("template");
-    $type_key = get_key("button_type");
+    $key = lyket_get_key("template");
+    $type_key = lyket_get_key("button_type");
     $button_type = get_option($type_key, "like");
     $value = get_option($key, "simple"); ?>
       <select
@@ -46,14 +46,14 @@ function render_template_input()
         name=<?php echo $key; ?>
         required
       >
-        <?php echo render_options($lyket_templates[$button_type], $value); ?>
+        <?php echo lyket_render_options($lyket_templates[$button_type], $value); ?>
       </select>
     <?php
 }
 
-function render_h_align_input()
+function lyket_render_h_align_input()
 {
-    $key = get_key("h_align");
+    $key = lyket_get_key("h_align");
     $options = array(
       "Center" => "center",
       "Left" => "left",
@@ -65,14 +65,14 @@ function render_h_align_input()
         name=<?php echo $key; ?>
         required
       >
-        <?php echo render_options($options, $value); ?>
+        <?php echo lyket_render_options($options, $value); ?>
       </select>
     <?php
 }
 
-function render_v_align_input()
+function lyket_render_v_align_input()
 {
-    $key = get_key("v_align");
+    $key = lyket_get_key("v_align");
     $options = array(
       "Top" => "top",
       "Bottom" => "bottom",
@@ -84,14 +84,14 @@ function render_v_align_input()
         name=<?php echo $key; ?>
         required
       >
-        <?php echo render_options($options, $value); ?>
+        <?php echo lyket_render_options($options, $value); ?>
       </select>
     <?php
 }
-function render_text_color_input()
+function lyket_render_text_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("text_color"); ?>
+    $key = lyket_get_key("text_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -103,10 +103,10 @@ function render_text_color_input()
     <?php
 }
 
-function render_primary_color_input()
+function lyket_render_primary_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("primary_color"); ?>
+    $key = lyket_get_key("primary_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -118,10 +118,10 @@ function render_primary_color_input()
     <?php
 }
 
-function render_secondary_color_input()
+function lyket_render_secondary_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("secondary_color"); ?>
+    $key = lyket_get_key("secondary_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -133,10 +133,10 @@ function render_secondary_color_input()
     <?php
 }
 
-function render_background_color_input()
+function lyket_render_background_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("background_color"); ?>
+    $key = lyket_get_key("background_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -148,10 +148,10 @@ function render_background_color_input()
     <?php
 }
 
-function render_highlight_color_input()
+function lyket_render_highlight_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("highlight_color"); ?>
+    $key = lyket_get_key("highlight_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -163,10 +163,10 @@ function render_highlight_color_input()
     <?php
 }
 
-function render_icon_color_input()
+function lyket_render_icon_color_input()
 {
     global $lyket_default_colors;
-    $key = get_key("icon_color"); ?>
+    $key = lyket_get_key("icon_color"); ?>
       <input
         class="lk-color-picker"
         data-alpha-enabled="true"
@@ -178,7 +178,7 @@ function render_icon_color_input()
     <?php
 }
 
-function render_options($options, $selected)
+function lyket_render_options($options, $selected)
 {
     foreach ($options as $label => $value) {
         ?>
@@ -189,7 +189,7 @@ function render_options($options, $selected)
     }
 }
 
-function get_key($value)
+function lyket_get_key($value)
 {
     global $lyket_active_tab;
 

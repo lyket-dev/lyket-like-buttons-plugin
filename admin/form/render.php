@@ -3,10 +3,10 @@ include dirname(__FILE__) . '/inputs/buttons.php';
 include dirname(__FILE__) . '/inputs/user.php';
 include dirname(__FILE__) . '/preview.php';
 
-add_action('render_lyket_form', 'render_form');
+add_action('render_lyket_form', 'lyket_render_form');
 
 // * settings_fields tell the form what to do, as well as a hidden input to make it secure using a nonce. The argument passed to the function is a name for the settings group that will be registered later.
-function render_form($tab)
+function lyket_render_form($tab)
 {
     global $lyket_active_tab; ?>
         <div class="lk-admin-container">
